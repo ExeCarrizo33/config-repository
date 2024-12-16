@@ -6,6 +6,10 @@ server:
   port: 8761
 
 eureka:
+  instance:
+    hostname: eureka-server # El nombre del contenedor
   client:
     registerWithEureka: false
     fetchRegistry: false
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
